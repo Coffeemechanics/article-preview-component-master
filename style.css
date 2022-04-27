@@ -1,0 +1,243 @@
+:root {
+  --very_dark_grayish_blue: hsl(217, 19%, 35%);
+  --desaturated_dark_blue: hsl(214, 17%, 51%);
+  --grayish_blue: hsl(212, 23%, 69%);
+  --light_grayish_blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--light_grayish_blue);
+  font-family: "Manrope", sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 45.75rem;
+  height: 17.5625rem;
+  /* border: 2px solid black; */
+}
+.drawers {
+  width: 21.7125rem;
+  z-index: -1;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.text-part {
+  min-width: 27.875rem;
+  position: relative;
+  padding-left: 2.5rem;
+  left: -70px;
+  z-index: +1;
+  background-color: white;
+  padding-right: 2.5rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.text-part h1 {
+  font-size: 21px;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  color: var(--very_dark_grayish_blue);
+}
+.text-part p {
+  font-size: 13px;
+  color: var(--grayish_blue);
+}
+
+.text-part .avatar {
+  width: 40px;
+  border-radius: 19px;
+}
+.name-date {
+  text-align: left;
+  margin-left: 0.75rem;
+}
+.name-date p {
+  color: var(--grayish_blue);
+  margin-top: 3px;
+}
+.name-date h2 {
+  color: var(--very_dark_grayish_blue);
+}
+.avatar-icon {
+  width: 22.8125rem;
+  height: 2.625rem;
+  /* border: 2px solid black; */
+  display: flex;
+  position: relative;
+  top: -30px;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.avatar-icon h2 {
+  font-size: 12px;
+}
+button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  margin-left: auto;
+  background-color: white;
+}
+.check-click {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light_grayish_blue);
+  border-radius: 50%;
+  border: none;
+}
+.check-click:hover {
+  background-color: var(--grayish_blue);
+  cursor: pointer;
+}
+.check-click:hover .shareicon {
+  cursor: pointer;
+  filter: brightness(100);
+}
+.check-click:active {
+  background-color: var(--grayish_blue);
+}
+.check-click:active .share-icon {
+  filter: brightness(100);
+}
+
+span {
+  display: inline-block;
+}
+.share-stuff {
+  width: 15.5rem;
+  height: 3.4375rem;
+  background-color: var(--very_dark_grayish_blue);
+  position: relative;
+  top: -60px;
+  left: 222.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.share-stuff span {
+  min-width: 1.125rem;
+  height: 1.125rem;
+  transform: rotate(45deg);
+  background-color: var(--very_dark_grayish_blue);
+  position: relative;
+  top: 1.6875rem;
+  right: 7.1875rem;
+}
+.share-stuff p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11.5px;
+  margin-left: 2rem;
+}
+.share-stuff img {
+  padding: 0.75rem;
+}
+.share-stuff img:hover {
+  cursor: pointer;
+}
+#facebook {
+  margin-left: 1rem;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  background-color: var(--grayish_blue);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.attribution {
+  font-size: 11px;
+}
+@media screen and (max-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    max-width: 20.5625rem;
+    height: 32.0625rem;
+  }
+  .drawers {
+    width: 20.5625rem;
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .text-part {
+    min-width: 20.5625rem;
+    left: 0;
+    padding: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    top: -3.125rem;
+    height: 19.6875rem;
+    padding-left: 1.875rem;
+  }
+
+  .header-paragraph {
+    max-width: 16.0625rem;
+  }
+  .text-part h1 {
+    font-size: 16px;
+  }
+  .text-part p {
+    font-size: 13px;
+  }
+  .avatar-icon {
+    margin-top: -0.1rem;
+  }
+  .name-date h2 {
+    font-size: 12px;
+  }
+  button {
+    margin-left: 4.6rem;
+    margin-top: 1.2rem;
+    z-index: 20;
+  }
+  .share-stuff {
+    left: -1.875rem;
+    top: 2.25rem;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 4rem;
+    z-index: 10;
+    width: 20.5625rem;
+    justify-content: left;
+  }
+  span {
+    display: none;
+  }
+  #facebook {
+    margin-left: 0.4rem;
+  }
+  footer {
+    top: 20px;
+  }
+}
